@@ -1,0 +1,8 @@
+env.py
+.ipynb_checkpoints/
+.DS_Store
+__pycache__
+*.csv
+*.xlsx
+scaling_lesson.ipynb
+modeling_lesson.ipynb
