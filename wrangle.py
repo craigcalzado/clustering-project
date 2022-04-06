@@ -104,7 +104,7 @@ def prepare_zillow(df):
     # dropping cols/rows where more than half of the values are null
     df = handle_missing_values(df, prop_required_column = .5, prop_required_row = .5)
     # dropping the columns with 17K missing values too much to fill/impute/drop rows
-    df = df.drop(columns=['heatingorsystemtypeid', 'buildingqualitytypeid', 'propertyzoningdesc', 'unitcnt', 'heatingorsystemdesc', 'finishedsquarefeet12', 'calculatedbathnbr', 'Unnamed: 0'])
+    df = df.drop(columns=['heatingorsystemtypeid', 'buildingqualitytypeid', 'propertyzoningdesc', 'unitcnt', 'heatingorsystemdesc', 'finishedsquarefeet12', 'calculatedbathnbr', 'propertycountylandusecode', 'Unnamed: 0'])
     # imputing descreet columns with most frequent value
     df = impute(df, 'most_frequent', ['fullbathcnt', 'regionidcity', 'regionidzip', 'yearbuilt', 'censustractandblock'])
     # imputing continuous columns with median value
